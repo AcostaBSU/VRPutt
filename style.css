@@ -1,0 +1,414 @@
+/* ===== COLOR SYSTEM ===== */
+:root {
+    --dark: #060706;
+    --accent: #276C3B;
+    --light: #FEFEFE;
+}
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: #F3F6F4;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+    width: 95%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 40px;
+}
+
+section h1 {
+   color: #276C3B;
+}
+
+section h2 {
+   color: #276C3B;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: var(--light);
+    border-bottom: 1px solid var(--muted);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 1.4rem;
+}
+
+/* ===== NAVBAR ===== */
+header {
+    background: #276C3B;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #FEFEFE;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FEFEFE;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+}
+
+/* Hover = inverted button */
+nav a:hover {
+    background: #FEFEFE;
+    color: #060706;
+}
+/* ===== HERO ===== */
+.hero {
+    padding: 120px 20px;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.hero h2 {
+    font-size: 2.6rem;
+    max-width: 700px;
+    margin: auto;
+}
+
+.hero p {
+    margin-top: 15px;
+    color: #444;
+}
+
+.hero button {
+    margin-top: 25px;
+    padding: 12px 26px;
+    background: var(--accent);
+    color: var(--light);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+/* Hero layout */
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+/* Left image */
+.hero-image img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+/* Right text */
+.hero-text {
+    max-width: 600px;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        max-width: 200px;
+    }
+}
+
+/* ===== SECTIONS ===== */
+/* Sections */
+.section {
+    padding: 40px 0;
+    background: #F3F6F4; /* now gray by default */
+}
+
+.section.alt {
+    background: #FEFEFE; /* white becomes alternate */
+}
+
+.section h2 {
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+/* ===== GRID ===== */
+.grid {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* ===== CARDS ===== */
+.card {
+    flex: 1;
+    min-width: 280px;
+    background: var(--accent);
+    color: var(--light);
+    border: 1px solid var(--muted);
+    padding: 30px;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: CECECE;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var(--light);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ===== FORM ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid var(--muted);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+/* BUTTON */
+button[type="submit"] {
+    background: var(--accent);
+    color: var(--light);
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid var(--muted);
+    margin-top: 40px;
+    background-color: #CECECE;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .grid {
+        flex-direction: column;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Feature Card Layout */
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: #FEFEFE;
+    border: 1px solid #CECECE;
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+/* Image */
+.feature-card img {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Text */
+.feature-text h3 {
+    margin-bottom: 10px;
+}
+
+.feature-text p {
+    color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .feature-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-card img {
+        width: 150px;
+    }
+}
+
+
+#sdp {
+    position: absolute;
+    margin: 10px;
+}
+#sdp img {
+    width: 80px;
+    cursor: pointer;
+    display: block;
+}
+#sdp > div {
+    background-color: #0033A0;
+    color: white;
+    text-align: center;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 15px;
+    visibility: hidden;
+    position: relative;
+}
+
+#sdp a {
+    text-decoration: none;
+    color: #D64309;
+    font-weight: bold;
+}
+
+/* Project section layout */
+.project-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Text side */
+.project-text {
+    flex: 1;
+}
+
+/* Image side */
+.project-image img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Responsive: stack like hero */
+@media (max-width: 768px) {
+    .project-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-image img {
+        max-width: 250px;
+    }
+}
+
+/* Motivation section layout */
+.motivation-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Image */
+.motivation-image img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Text */
+.motivation-text {
+    flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .motivation-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .motivation-image img {
+        max-width: 250px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#home, #about, #team {
+    scroll-margin-top: 80px;
+}

@@ -99,9 +99,13 @@ nav a:hover {
 }
 /* ===== HERO ===== */
 .hero {
-    padding: 120px 20px;
+    padding: 60px 20px;
     text-align: center;
     background-color: #FFFFFF;
+}
+
+.hero h1 {
+    font-size: 3em;
 }
 
 .hero h2 {
@@ -113,6 +117,7 @@ nav a:hover {
 .hero p {
     margin-top: 15px;
     color: #444;
+    font-size: 1.15em;
 }
 
 .hero button {
@@ -142,7 +147,7 @@ nav a:hover {
 
 /* Left image */
 .hero-image img {
-    max-width: 300px;
+    max-width: 400px;
     width: 100%;
     height: auto;
 }
